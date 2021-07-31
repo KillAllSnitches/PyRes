@@ -1,4 +1,4 @@
-import os, time
+import os, time, ctypes
 from colorama import Style, Fore, init
 init(convert=True)
 
@@ -7,6 +7,7 @@ reset = Style.RESET_ALL
 run = os.system
 
 def logo():
+    ctypes.windll.kernel32.SetConsoleTitleW("PyRes | Resolution Changer")
     run('cls')
     print(c.YELLOW + """
 ██████╗ ██╗   ██╗██████╗ ███████╗███████╗
